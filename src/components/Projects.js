@@ -1,8 +1,9 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import postresLecker from "../assets/img/postres-lecker-img.jpg";
+import supermercado from "../assets/img/supermercado-base-datos.jpg";
+import saturday from "../assets/img/saturday-com.jpg";
+import AppRutina from "../assets/img/app-rutina-ejercicios.jpg";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -11,35 +12,30 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
+      title: "Postres Lecker",
+      description: "Baking Entrepreneurship",
+      imgUrl: postresLecker,
+      URL: "https://postres-lecker.netlify.app",
+      app: false
+    },{
+      title: "Supermarket",
+      description: "Database administrator",
+      imgUrl: supermercado,
+      URL: "https://base-datos-manager-supermercado.netlify.app/",
+      app: true
+    },{
+      title: "Saturday.com",
+      description: "Tasks manager",
+      imgUrl: saturday,
+      URL: "https://saturday-com.netlify.app",
+      app: true
+    },{
+      title: "Exercise Routine App",
+      description: "Administrates your exercise routine",
+      imgUrl: AppRutina,
+      URL: "https://app-rutina-ejercicios.netlify.app",
+      app: true
+    }
   ];
 
   return (
@@ -55,17 +51,18 @@ export const Projects = () => {
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
-                      <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                      <Nav.Link eventKey="first">Portfolio</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                      <Nav.Link eventKey="second">Just Apps</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                      <Nav.Link eventKey="third">Your Template</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
+                    <p>Take a look to some of the projects I've completed</p>
                       <Row>
                         {
                           projects.map((project, index) => {
@@ -79,11 +76,25 @@ export const Projects = () => {
                         }
                       </Row>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                    <Tab.Pane eventKey="second">
+                    <p>This are just the web applications I've developt</p>
+                    <Row>
+                        {
+                          projects.map((project, index) => {
+                            if(project.app){
+                              return (
+                                <ProjectCard
+                                  key={index}
+                                  {...project}
+                                  />
+                              )
+                            }
+                          })
+                        }
+                      </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                      <p>¡Here are some ideas you could consider for your own website!</p>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>

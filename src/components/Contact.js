@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import contactImg from "../assets/img/contact-img.svg";
+import contactImg from "../assets/img/Website Creator-amico.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -89,6 +89,7 @@ export const Contact = () => {
             </TrackVisibility>
           </Col>
         </Row>
+        <a style={{color: "#fff", textDecoration: "none", fontSize: "12px" }} href="https://storyset.com/people">People illustrations by Storyset</a>
       </Container>
     </section>
   )
