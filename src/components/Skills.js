@@ -83,7 +83,7 @@ export const Skills = () => {
                         </Carousel>
                     </div>
                 </div>
-                <a style={{color: "white", fontSize: "10px", textDecoration: "none", marginLeft: "40px"}} href="https://www.flaticon.es/iconos-gratis/css" title="css iconos">Css iconos creados por Pixel perfect - Flaticon</a>
+                <a style={{color: "white", fontSize: "12px", textDecoration: "none", marginLeft: "40px"}} href="https://www.flaticon.es/iconos-gratis/css" title="css iconos">Css iconos creados por Pixel perfect - Flaticon</a>
             </div>
         </div>
         <BasicModal />
