@@ -21,13 +21,16 @@ export const WhatsApp = () => {
         <div className="msj-bx wow slideInUp">
           <Row>
             <Col lg={12} md={6} xl={5}>
-              <h3>¿Is your dream happening right now?<br></br>Send me a WhatsApp!</h3>
+              <h3>¿Is your dream happening right now?<br></br>¡Send me a WhatsApp!</h3>
             </Col>
             <Col md={6} xl={7}>
               <form>
                 <div className="new-msj-bx">
                   <input value={msj} type="text" onChange={(e) => setMsj(e.target.value)}/>
-                  <button onClick={sendWA} type="submit">Send</button>
+                  
+                  <button style={window.screen.width < 600 ? {padding: "10px 35px"} 
+                  : {padding: "20px 65px"}} 
+                  onClick={sendWA} type="submit">Send</button>
                 </div>
               </form>
             </Col>
