@@ -5,12 +5,16 @@ import Modal from '@mui/material/Modal';
 import { useContext } from 'react';
 import {SkillsContext} from "../context/SkillsContext"
 //Images importation
-import HTML from "../assets/img/HTML-graf.png";
-import CSS from "../assets/img/CSS-graf.png";
-import JS from "../assets/img/JS-graf.png";
-import react from "../assets/img/React-graf.png";
-import Design from "../assets/img/Design-graf.png";
-import MUI from "../assets/img/MUI-graf.png"; 
+import HTML from "../assets/img/html-5.png";
+import WebD from "../assets/img/Web Developer_Monochromatic.svg";
+import CSS from "../assets/img/css-3.png";
+import JS from "../assets/img/js.png";
+import react from "../assets/img/react-logo.svg";
+import Design from "../assets/img/layers.png";
+import MUI from "../assets/img/material-ui-1.svg";
+import VITEJS from "../assets/img/vitejs.svg";
+import FIGMA from '../assets/img/figma-logo.svg'
+import CHAKRA from '../assets/img/icons8-chakra-ui.svg'
 
 const style = {
   position: 'absolute',
@@ -18,7 +22,7 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   height: "70%",
-  bgcolor: '#151515',
+  bgcolor: '#1C1C1C',
   boxShadow: 24,
   p: 4,
   borderRadius: "15px",
@@ -28,7 +32,7 @@ const style = {
 export function BasicModal() {
 
   const context = useContext(SkillsContext)
-
+  const skills = [HTML,WebD,CSS,JS,react,Design,MUI,VITEJS,FIGMA,CHAKRA]
   return (
     <div>
       <Modal
@@ -42,24 +46,13 @@ export function BasicModal() {
             Skills Percentaje
           </Typography>
           <div className='modal-skills'>
-              <div>
-              <img src={HTML}/>
-              </div>
-              <div>
-              <img src={CSS}/>
-              </div>
-              <div>
-              <img src={JS}/>
-              </div>
-              <div>
-              <img src={react}/>
-              </div>
-              <div>
-              <img src={Design}/>
-              </div>
-              <div>
-              <img src={MUI}/>
-              </div>
+              {skills.map((skill,index)=>{
+                return (
+                  <div key={index}>
+                    <img src={skill}/>
+                  </div>
+                )
+              })}
           </div>
         </Box>
       </Modal>
