@@ -5,21 +5,21 @@ import JS from "../assets/img/js.png";
 import react from "../assets/img/react-logo.svg";
 import Design from "../assets/img/layers.png";
 import MUI from "../assets/img/material-ui-1.svg";
-import VITELG from "../assets/img/vitejs.svg";
+import VITEJS from "../assets/img/vitejs.svg";
+import FIGMA from '../assets/img/figma-logo.svg'
+import CHAKRA from '../assets/img/icons8-chakra-ui.svg'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import arrow1 from "../assets/img/arrow1.svg";
-import arrow2 from "../assets/img/arrow2.svg";
+
 import colorSharp from "../assets/img/color-sharp.png"
 import React from "react";
 import { useContext } from 'react';
-import {SkillsContext} from "../context/SkillsContext"
+import { SkillsContext } from "../context/SkillsContext"
 import { BasicModal } from "./Skills-modal"
 
 export const Skills = () => {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5
     },
@@ -37,57 +37,48 @@ export const Skills = () => {
     }
   };
 
+  const skills = [
+    { img: HTML, text: 'HTML' },
+    { img: CSS, text: 'CSS' },
+    { img: JS, text: 'JavaScript' },
+    { img: react, text: 'React JS' },
+    { img: Design, text: 'UI Design' },
+    { img: MUI, text: 'Material UI' },
+    { img: CHAKRA, text: 'Chakra UI' },
+    { img: VITEJS, text: 'Vite.js' },
+    { img: FIGMA, text: 'Figma' }
+  ]
+
   const context = useContext(SkillsContext)
 
   return (
     <section className="skill" id="skills">
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <div className="skill-bx wow zoomIn" >
-                        <h2>Skills</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div onClick={context.handleOpen} className="item">
-                                <img src={WebD} alt="Image" />
-                                <h5>Web Development</h5>
-                            </div>
-                            <div onClick={context.handleOpen} className="item">
-                                <img src={HTML} alt="Image" />
-                                <h5>HTML</h5>
-                            </div>
-                            <div onClick={context.handleOpen} className="item">
-                                <img src={CSS} alt="Image" />
-                                <h5>CSS</h5>
-                            </div>
-                            <div onClick={context.handleOpen} className="item">
-                                <img src={JS} alt="Image" />
-                                <h5>JavaScript</h5>
-                            </div>
-                            <div onClick={context.handleOpen} className="item">
-                                <img src={react} alt="Image" />
-                                <h5>React</h5>
-                            </div>
-                            <div onClick={context.handleOpen} className="item">
-                                <img src={Design} alt="Image" />
-                                <h5>UI Design</h5>
-                            </div>
-                            <div onClick={context.handleOpen} className="item">
-                                <img src={MUI} alt="Image" />
-                                <h5>Material UI</h5>
-                            </div>
-                            <div onClick={context.handleOpen} className="item">
-                                <img src={VITELG} alt="Image" />
-                                <h5>Vite.js</h5>
-                            </div>
-                        </Carousel>
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="skill-bx wow zoomIn" >
+              <h2>Skills</h2>
+              <p>Here are some of the technologies I used for building websites. <br /> ¡Cilck them to know more!</p>
+              <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+                {skills.map((skill, index) => {
+                  return (
+                    <div
+                      key={index}
+                      onClick={context.handleOpen} className="item">
+                      <img src={skill.img} alt="Image" />
+                      <h5>{skill.text}</h5>
                     </div>
-                </div>
-                <a style={{color: "white", fontSize: "12px", textDecoration: "none", marginLeft: "40px"}} href="https://www.flaticon.es/iconos-gratis/css" title="css iconos">Css iconos creados por Pixel perfect - Flaticon</a>
+                  )
+                })}
+              </Carousel>
             </div>
+          </div>
+          <a href="https://www.flaticon.es/iconos-gratis/css" title="css iconos">Css iconos creados por Pixel perfect - Flaticon</a>
+          <a target="_blank" href="https://icons8.com">Chakra UI icon by Icons8</a>
         </div>
-        <BasicModal />
-        <img className="background-image-left" src={colorSharp} alt="Image" />
+      </div>
+      <BasicModal />
+      <img className="background-image-left" src={colorSharp} alt="Image" />
     </section>
   )
 }
