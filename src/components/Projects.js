@@ -152,7 +152,7 @@ export const Projects = () => {
                           }
                         </Row>
                       </Tab.Pane>
-                      <Tab.Pane eventKey="third">
+                      <Tab.Pane eventKey="second">
                         <p>¡Here are some ideas you could consider for your own website!</p>
                         <Row>
                           {
