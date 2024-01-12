@@ -56,7 +56,7 @@ export const Banner = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <span className="tagline">Mat_dweb portfolio</span>
-                  <h1>{`Hi! I'm Matias `} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
+                  <h1>{`Hi👋🏼 I'm Matias `} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
                   <p>I am a self-taught React Front-end developer. ⚛️ I specialice in web sites and web application development. 👨🏻‍💻 I am passionate about Tecnology. ⌨️ I am also currently studying Computer Science in Costa Rica. 📚 </p>
                   <a style={{
                     color: "#fff", textDecoration: "none",
