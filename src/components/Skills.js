@@ -1,16 +1,19 @@
 import HTML from "../assets/img/html-5.png";
-import WebD from "../assets/img/Web Developer_Monochromatic.svg";
 import CSS from "../assets/img/css-3.png";
 import JS from "../assets/img/js.png";
 import react from "../assets/img/react-logo.svg";
 import Design from "../assets/img/layers.png";
-import MUI from "../assets/img/material-ui-1.svg";
 import VITEJS from "../assets/img/vitejs.svg";
 import FIGMA from '../assets/img/figma-logo.svg'
-import CHAKRA from '../assets/img/icons8-chakra-ui.svg'
 import Carousel from 'react-multi-carousel';
+import TYPESCRIPT from '../assets/img/icons8-typescript-96.png'
+import EXPRESS from '../assets/img/icons8-express-js-100.png'
+import JAVA from '../assets/img/icons8-java-94.png'
+import MONGODB from '../assets/img/icons8-mongodb-a-cross-platform-document-oriented-database-program-96.png'
+import NEXTJS from '../assets/img/icons8-nextjs-96.png'
+import PHYTON from '../assets/img/icons8-python.svg'
+import REDUX from '../assets/img/icons8-redux-an-open-source-javascript-library-for-managing-application-state-96.png'
 import 'react-multi-carousel/lib/styles.css';
-
 import colorSharp from "../assets/img/color-sharp.png"
 import React from "react";
 import { useContext } from 'react';
@@ -41,12 +44,17 @@ export const Skills = () => {
     { img: HTML, text: 'HTML' },
     { img: CSS, text: 'CSS' },
     { img: JS, text: 'JavaScript' },
+    { img: TYPESCRIPT, text: 'TypeScript' },
     { img: react, text: 'React JS' },
-    { img: Design, text: 'UI Design' },
-    { img: MUI, text: 'Material UI' },
-    { img: CHAKRA, text: 'Chakra UI' },
     { img: VITEJS, text: 'Vite.js' },
-    { img: FIGMA, text: 'Figma' }
+    { img: NEXTJS, text: 'Next.js' },
+    { img: REDUX, text: 'Redux' },
+    { img: EXPRESS, text: 'Express js' },
+    { img: MONGODB, text: 'mongo db' },
+    { img: Design, text: 'UI Design' },
+    { img: FIGMA, text: 'Figma' },
+    { img: JAVA, text: 'Java' },
+    { img: PHYTON, text: 'Phyton' },
   ]
 
   const context = useContext(SkillsContext)
