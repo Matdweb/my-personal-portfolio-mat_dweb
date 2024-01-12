@@ -12,7 +12,7 @@ import REACT from "../assets/img/react-logo.svg";
 import DESING_UI from "../assets/img/layers.png";
 import VITEJS from "../assets/img/vitejs.svg";
 import FIGMA from '../assets/img/figma-logo.svg';
-import TYPESCRIPT from '../assets/img/icons8-typescript.svg'
+import TYPESCRIPT from '../assets/img/icons8-typescript-240.png'
 import EXPRESS from '../assets/img/icons8-express-js-250.png'
 import JAVA from '../assets/img/icons8-java.svg'
 import MONGODB from '../assets/img/icons8-mongodb.svg'
