@@ -12,13 +12,13 @@ import REACT from "../assets/img/react-logo.svg";
 import DESING_UI from "../assets/img/layers.png";
 import VITEJS from "../assets/img/vitejs.svg";
 import FIGMA from '../assets/img/figma-logo.svg';
-import TYPESCRIPT from '../assets/img/icons8-typescript-96.png'
-import EXPRESS from '../assets/img/icons8-express-js-100.png'
-import JAVA from '../assets/img/icons8-java-94.png'
-import MONGODB from '../assets/img/icons8-mongodb-a-cross-platform-document-oriented-database-program-96.png'
-import NEXTJS from '../assets/img/icons8-nextjs-96.png'
+import TYPESCRIPT from '../assets/img/icons8-typescript.svg'
+import EXPRESS from '../assets/img/icons8-express-js-250.png'
+import JAVA from '../assets/img/icons8-java.svg'
+import MONGODB from '../assets/img/icons8-mongodb.svg'
+import NEXTJS from '../assets/img/icons8-nextjs-240.png'
 import PHYTON from '../assets/img/icons8-python.svg'
-import REDUX from '../assets/img/icons8-redux-an-open-source-javascript-library-for-managing-application-state-96.png'
+import REDUX from '../assets/img/icons8-redux.svg'
 
 const style = {
   position: 'absolute',
