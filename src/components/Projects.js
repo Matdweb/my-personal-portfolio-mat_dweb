@@ -167,7 +167,7 @@ export const Projects = () => {
                           }
                         </Row>
                         <a style={{ textDecoration: "none", color: "#fff" }}
-                          href="https://plantillashtmlgratis.com/categoria-plantillas/plantillas-html/">Plantillas tomadas de PlantillasHTMLGratis</a>
+                          href="https://plantillashtmlgratis.com/categoria-plantillas/plantillas-html/">Templates taken from PlantillasHTMLGratis</a>
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>
