@@ -13,6 +13,8 @@ import MONGODB from '../assets/img/icons8-mongodb.svg'
 import NEXTJS from '../assets/img/icons8-nextjs-240.png'
 import PHYTON from '../assets/img/icons8-python.svg'
 import REDUX from '../assets/img/icons8-redux.svg'
+import ADOBEXD from '../assets/img/icons8-adobe-xd.svg'
+import TAILWINDCSS from '../assets/img/icons8-tailwind-css-240.png'
 import 'react-multi-carousel/lib/styles.css';
 import colorSharp from "../assets/img/color-sharp.png"
 import React from "react";
@@ -49,10 +51,12 @@ export const Skills = () => {
     { img: VITEJS, text: 'Vite.js' },
     { img: NEXTJS, text: 'Next.js' },
     { img: REDUX, text: 'Redux' },
+    { img: TAILWINDCSS, text: 'Tailwind css' },
     { img: EXPRESS, text: 'Express js' },
     { img: MONGODB, text: 'mongo db' },
     { img: Design, text: 'UI Design' },
     { img: FIGMA, text: 'Figma' },
+    { img: ADOBEXD, text: 'Adobe XD' },
     { img: JAVA, text: 'Java' },
     { img: PHYTON, text: 'Phyton' },
   ]
