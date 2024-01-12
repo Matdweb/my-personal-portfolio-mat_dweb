@@ -19,6 +19,8 @@ import MONGODB from '../assets/img/icons8-mongodb.svg'
 import NEXTJS from '../assets/img/icons8-nextjs-240.png'
 import PHYTON from '../assets/img/icons8-python.svg'
 import REDUX from '../assets/img/icons8-redux.svg'
+import ADOBEXD from '../assets/img/icons8-adobe-xd.svg'
+import TAILWINDCSS from '../assets/img/icons8-tailwind-css-240.png'
 
 const style = {
   position: 'absolute',
@@ -36,7 +38,7 @@ const style = {
 export function BasicModal() {
 
   const context = useContext(SkillsContext)
-  const skills = [HTML, CSS, JS, TYPESCRIPT, REACT, VITEJS, NEXTJS, REDUX, EXPRESS, MONGODB, FIGMA, DESING_UI, JAVA, PHYTON]
+  const skills = [HTML, CSS, JS, TYPESCRIPT, REACT, VITEJS, NEXTJS, REDUX, TAILWINDCSS, EXPRESS, DESING_UI, MONGODB, FIGMA, ADOBEXD, JAVA, PHYTON]
   return (
     <div>
       <Modal
