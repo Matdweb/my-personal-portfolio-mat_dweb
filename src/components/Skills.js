@@ -6,13 +6,13 @@ import Design from "../assets/img/layers.png";
 import VITEJS from "../assets/img/vitejs.svg";
 import FIGMA from '../assets/img/figma-logo.svg'
 import Carousel from 'react-multi-carousel';
-import TYPESCRIPT from '../assets/img/icons8-typescript-96.png'
-import EXPRESS from '../assets/img/icons8-express-js-100.png'
-import JAVA from '../assets/img/icons8-java-94.png'
-import MONGODB from '../assets/img/icons8-mongodb-a-cross-platform-document-oriented-database-program-96.png'
-import NEXTJS from '../assets/img/icons8-nextjs-96.png'
+import TYPESCRIPT from '../assets/img/icons8-typescript.svg'
+import EXPRESS from '../assets/img/icons8-express-js-250.png'
+import JAVA from '../assets/img/icons8-java.svg'
+import MONGODB from '../assets/img/icons8-mongodb.svg'
+import NEXTJS from '../assets/img/icons8-nextjs-240.png'
 import PHYTON from '../assets/img/icons8-python.svg'
-import REDUX from '../assets/img/icons8-redux-an-open-source-javascript-library-for-managing-application-state-96.png'
+import REDUX from '../assets/img/icons8-redux.svg'
 import 'react-multi-carousel/lib/styles.css';
 import colorSharp from "../assets/img/color-sharp.png"
 import React from "react";
@@ -81,8 +81,8 @@ export const Skills = () => {
               </Carousel>
             </div>
           </div>
-          <a href="https://www.flaticon.es/iconos-gratis/css" title="css iconos">Css iconos creados por Pixel perfect - Flaticon</a>
-          <a target="_blank" href="https://icons8.com">Chakra UI icon by Icons8</a>
+          <a href="https://www.flaticon.es/iconos-gratis/css" title="css iconos">Icons by Pixel perfect - Flaticon</a>
+          <a target="_blank" href="https://icons8.com">Other Icons by Icons8</a>
         </div>
       </div>
       <BasicModal />
