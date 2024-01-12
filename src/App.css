@@ -87,6 +87,7 @@ nav.navbar {
   position: fixed;
   width: 100%;
   top: 0;
+  left: 0;
   z-index: 9999;
   transition:  0.32s ease-in-out;
 }
@@ -305,6 +306,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 0 0 50px 0;
   position: relative;
 }
+#skills a{
+  color: white; 
+  font-size: 12px; 
+  text-decoration: none; 
+  margin-left: 40px;
+}
 .skill-bx {
   background: #151515;
   border-radius: 64px;
@@ -329,8 +336,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
 }
 .skill-slider .item img {
-  width: 50%;
+  width: 200px;
   margin: 0 auto 15px auto;
+  height: 200px;
 }
 .background-image-left {
   top: 28%;
@@ -342,7 +350,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .modal-skills{ 
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: flex-start;
   flex-flow: row wrap;
   height: 95%;
@@ -352,9 +360,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .modal-skills div{
-  padding: 5px;
-  width: 200px;
-  height: 200px;
+  padding: 10px 12px;
+  width: 150px;
+  height: 150px;
 }
 
 .modal-skills div img{
@@ -402,7 +410,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   overflow: hidden;
 }
 .project .nav.nav-pills .nav-item {
-  width: 33.33333%;
+  width: 50%;
 }
 .project .nav.nav-pills .nav-link {
   background-color: transparent;
@@ -500,7 +508,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-/************ Projects Css ************/
+/************ Contact Css ************/
 .contact {
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
   padding: 60px 0 200px 0;
@@ -572,6 +580,128 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
 }
 
+/************ Cards Css ************/
+.cards{ 
+  background-color: rgba(63, 63, 63, 0.212);
+  min-height: 85vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+.container-cards{
+  display: flex;
+  width: 100%;
+  height: 85%;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-card {
+  height: 120px;
+  overflow: hidden;
+}
+
+.header-card h2{
+  position: absolute;
+  top: 28px;
+  left: 20px;
+}
+
+.header-card p{
+  position: absolute;
+  color: rgb(207, 207, 207);
+  top: 60px;
+  left: 20px;
+  font-weight: bold;
+}
+
+.header-card img{
+  position: absolute;
+  width: 350px;
+  height: 0;
+  object-fit: cover;
+}
+
+.card{
+  width: 350px;
+  background: rgb(22,17,21);
+  background: linear-gradient(162deg, rgba(22,17,21,1) 70%, rgba(30,21,64,1) 100%);
+  border-radius: 8px;
+  margin: 2rem;
+  box-shadow: 0 0 12px rgb(39, 39, 39);
+  transition: all ease .8s;
+  color: #fff;
+  padding-bottom: 20px;
+  min-height: 425px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+}
+
+.card:hover{
+  transform: scale(1.05);
+  border-radius: 8px;
+  margin: .5rem;
+  box-shadow: 0 0 15px rgb(39, 39, 39);
+}
+.card:hover .header-card img{
+  position: absolute;
+  height: 120px;
+  z-index: -1;
+}
+.card:hover .header-card h2{
+  color: rgb(255, 255, 255);
+}
+
+.header-card img{
+  border-radius: 8px 8px 0 0;
+  max-height: 200px;
+  height: 0px;
+  width: 100%;
+  transition: all .7s;
+}
+
+.card footer{
+  padding: 25px 1rem;
+  color: #aaa;
+}
+
+.card footer ul{
+  margin: 3px;
+}
+
+.card .btn-card{
+  width: 100%;
+  height: 60px;
+  display: flex;
+}
+
+.card:nth-child(1) .btn-card{
+  margin-top: 86px;
+}
+.card:nth-child(2) .btn-card{
+  margin-top: 43px;
+}
+
+.card .btn-card button{
+  margin: auto;
+  width: 300px;
+  height: 50px;
+  color: #fff;
+  background-color: #aa367c00;
+  border: 3px solid #AA367C; 
+}
+
+.card .btn-card button:hover{
+  background-color: #aa367c8f;
+  box-shadow: 8px 8px 0 rgb(0, 0, 0);
+}
+
+
 /************ Footer Css ************/
 .footer {
   padding: 0 0 50px 0;
@@ -584,7 +714,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: #FFFFFF;
   border-radius: 55px;
   color: #121212;
-  padding: 85px 125px;
+  padding: 85px 50px;
   margin-bottom: 80px;
   margin-top: -122px;
 }
@@ -630,11 +760,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 500;
   background: transparent;
   border: 0;
-  padding: 0 15px;
+  padding: 0 10px;
 }
 .new-msj-bx button {
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-  padding: 20px 65px;
   color: #fff;
   font-weight: 500;
   letter-spacing: 0.5px;
