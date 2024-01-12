@@ -11,7 +11,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Web Developer", "Web App Developer", "Web Designer", "UI/UX Designer" ];
+  const toRotate = ["Web Developer", "Web App Developer", "Web Designer", "UI/UX Designer"];
   const period = 2000;
 
   useEffect(() => {
@@ -54,22 +54,24 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Mat_dweb portfolio</span>
-                <h1>{`Hi! I'm Matias `} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>I am a self-taught React Front-end developer. I specialice in web sites and web application development. I am passionate about Tecnology. I am also currently studying Computer Science in Costa Rica. </p>
-                  <a style={{color: "#fff", textDecoration: "none", 
-                  border: "3px solid #fff", width: "280px",
-                  padding: "12px", borderRadius: "15px"}} 
-                  href="https://www.canva.com/design/DAFOZTZxnKw/XVQZ8mbaHDcqF_gIa7qoPA/view?utm_content=DAFOZTZxnKw&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Download Resume<FaArrowAltCircleDown /></a>
-              </div>}
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  <span className="tagline">Mat_dweb portfolio</span>
+                  <h1>{`Hi! I'm Matias `} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
+                  <p>I am a self-taught React Front-end developer. ⚛️ I specialice in web sites and web application development. 👨🏻‍💻 I am passionate about Tecnology. ⌨️ I am also currently studying Computer Science in Costa Rica. 📚 </p>
+                  <a style={{
+                    color: "#fff", textDecoration: "none",
+                    border: "3px solid #fff", width: "280px",
+                    padding: "12px", borderRadius: "15px"
+                  }}
+                    href="https://www.canva.com/design/DAFOZTZxnKw/XVQZ8mbaHDcqF_gIa7qoPA/view?utm_content=DAFOZTZxnKw&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Download Resume<FaArrowAltCircleDown /></a>
+                </div>}
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img"/>
+                  <img src={headerImg} alt="Header Img" />
                 </div>}
             </TrackVisibility>
           </Col>
