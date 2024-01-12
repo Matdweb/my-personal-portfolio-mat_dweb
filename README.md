@@ -77,12 +77,6 @@ Connect with me effortlessly through the provided contact form.
 
 Find additional information and links in the website footer.
 
-## How to Use 🤔
-
-- Simply visit [your-website-url].
-- Navigate through the sections using the intuitive menu.
-- Explore projects, skills, and reach out using the contact form.
-
 ## Contributing 🤝
 
 Feel free to create an issue or pull request if you have any suggestions or improvements.
