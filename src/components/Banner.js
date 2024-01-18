@@ -63,7 +63,7 @@ export const Banner = () => {
                     border: "3px solid #fff", width: "280px",
                     padding: "12px", borderRadius: "15px"
                   }}
-                    href="https://www.canva.com/design/DAFOZTZxnKw/XVQZ8mbaHDcqF_gIa7qoPA/view?utm_content=DAFOZTZxnKw&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Download Resume<FaArrowAltCircleDown /></a>
+                    href="https://docs.google.com/document/d/1zO5GkVklwwFLGSOZf25c5Z1kt3ZQ_uciIWKsExuW9bQ/edit?usp=sharing">Download Resume<FaArrowAltCircleDown /></a>
                 </div>}
             </TrackVisibility>
           </Col>
