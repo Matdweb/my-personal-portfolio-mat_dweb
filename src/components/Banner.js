@@ -63,7 +63,7 @@ export const Banner = () => {
                     border: "3px solid #fff", width: "280px",
                     padding: "12px", borderRadius: "15px"
                   }}
-                    href="https://docs.google.com/document/d/1zO5GkVklwwFLGSOZf25c5Z1kt3ZQ_uciIWKsExuW9bQ/edit?usp=sharing">Download Resume<FaArrowAltCircleDown /></a>
+                    href="https://docs.google.com/file/d/1BKsUTNp-o17YjOsSY7VGQZc2J3l-MpF_/edit?usp=docslist_api&filetype=msword">Download Resume<FaArrowAltCircleDown /></a>
                 </div>}
             </TrackVisibility>
           </Col>
