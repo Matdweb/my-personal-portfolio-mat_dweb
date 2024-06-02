@@ -335,6 +335,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin: 0 auto;
   position: relative;
 }
+.react-multiple-carousel__arrow--left{
+  left: calc(4% - 30px) !important;
+}
+
+.react-multiple-carousel__arrow--right{
+  right: calc(4% - 30px) !important;
+}
+.item{
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
 .skill-slider .item img {
   width: 200px;
   margin: 0 auto 15px auto;
@@ -350,7 +365,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .modal-skills{ 
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: flex-start;
   flex-flow: row wrap;
   height: 95%;
@@ -778,4 +793,36 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #B8B8B8;
   letter-spacing: 0.5px;
   margin-top: 20px;
+}
+
+/* Responsive styles */
+@media screen and ( max-width: 1200px ) {
+
+  .react-multiple-carousel__arrow--left{
+    z-index: 10;
+    left: calc(4% - 20px) !important;
+  }
+  
+  .react-multiple-carousel__arrow--right{
+    z-index: 10;
+    right: calc(4% - 25px) !important;
+  }
+  
+  .react-multiple-carousel__arrow{
+    min-width: 35px !important;
+    min-height: 35px !important;
+  }
+}
+
+@media screen and ( max-width: 992px ) {
+
+  .react-multiple-carousel__arrow--left{
+    z-index: 10;
+    left: calc(4% - 10px) !important;
+  }
+  
+  .react-multiple-carousel__arrow--right{
+    z-index: 10;
+    right: calc(4% - 10px) !important;
+  }
 }
