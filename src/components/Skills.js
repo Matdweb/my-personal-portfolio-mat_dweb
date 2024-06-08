@@ -68,7 +68,6 @@ export const Skills = () => {
   }
 
   useEffect(()=> {
-    console.log(carouselPosition, endCarousel);
     handleCarouselLoop();
   }, [carouselPosition, endCarousel]);
 
