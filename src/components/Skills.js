@@ -1,10 +1,9 @@
-import React from "react";
-import { useContext } from "react";
+import React, { useEffect } from "react";
+import { useContext, useState } from "react";
 import "react-multi-carousel/lib/styles.css";
 import { SkillsContext } from "../context/SkillsContext";
 import colorSharp from "../assets/img/color-sharp.png";
 import { BasicModal } from "./Skills-modal";
-import Carousel from "react-multi-carousel";
 import {
   AdobeXDIcon,
   CSSIcon,
@@ -24,24 +23,6 @@ import {
 } from "../assets/icons/Icons";
 
 export const Skills = () => {
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  };
 
   const skills = [
     { Icon: HtmlIcon, text: "HTML" },
@@ -61,7 +42,35 @@ export const Skills = () => {
     { Icon: PythonIcon, text: "Phyton" },
   ];
 
+  const getElementsSize = () => {
+    const elements = document.querySelectorAll('.item-skill');
+    let sum = 0;
+    for (let i=0; i<elements.length; i++) {
+      sum += elements[i].getBoundingClientRect().width;
+    }
+    return sum / 2;   //Divided because elements are duplicated in array
+  }
+
   const context = useContext(SkillsContext);
+  const [carouselPosition, setCarouselPosition] = useState(1);
+  const endCarousel = getElementsSize();
+
+  const handleCarouselLoop = () => {
+    if(carouselPosition >= endCarousel){
+      setTimeout(() => {
+        setCarouselPosition(0);
+      }, 10);
+    } else {
+      setTimeout(() => {
+        setCarouselPosition(carouselPosition + 5);
+      }, 10);
+    }
+  }
+
+  useEffect(()=> {
+    console.log(carouselPosition, endCarousel);
+    handleCarouselLoop();
+  }, [carouselPosition, endCarousel]);
 
   return (
     <section className="skill" id="skills">
@@ -74,30 +83,31 @@ export const Skills = () => {
                 Here are some of the technologies I used for building websites.{" "}
                 <br /> ¡Cilck them to know more!
               </p>
-              <Carousel
-                responsive={responsive}
-                infinite={true}
-                className="owl-carousel owl-theme skill-slider"
+              <section 
+              className="carousel-container"
+              style={{
+                transform: `translateX(-${carouselPosition}px)`
+              }}
               >
-                {skills.map(({ Icon, text }, index) => {
+                {skills.concat(skills).map(({ Icon, text }, index) => {
                   return (
                     <div
                       key={index}
                       onClick={context.handleOpen}
-                      className="item"
+                      className="item-skill"
                     >
                       <Icon width="150" heigth="150" />
                       <h5>{text}</h5>
                     </div>
                   );
                 })}
-              </Carousel>
+              </section>
             </div>
           </div>
         </div>
       </div>
       <BasicModal />
-      <img className="background-image-left" src={colorSharp} alt="Image" />
+      <img className="background-image-left" src={colorSharp} alt="Purple Space as Background" />
     </section>
   );
 };
