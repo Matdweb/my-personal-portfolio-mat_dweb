@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useContext, useState } from "react";
+import { useContext, useState, useRef } from "react";
 import "react-multi-carousel/lib/styles.css";
 import { SkillsContext } from "../context/SkillsContext";
 import colorSharp from "../assets/img/color-sharp.png";
@@ -42,34 +42,27 @@ export const Skills = () => {
     { Icon: PythonIcon, text: "Phyton" },
   ];
 
-  const getElementsSize = () => {
-    const elements = document.querySelectorAll('.item-skill');
-    let sum = 0;
-    for (let i=0; i<elements.length; i++) {
-      sum += elements[i].getBoundingClientRect().width;
-    }
-    return sum / 2;   //Divided because elements are duplicated in array
-  }
-
   const context = useContext(SkillsContext);
   const [carouselPosition, setCarouselPosition] = useState(1);
-  const endCarousel = getElementsSize();
+  const endCarousel = 2970;  //total size of the half row of elements
 
-  const handleCarouselLoop = () => {
-    if(carouselPosition >= endCarousel){
-      setTimeout(() => {
-        setCarouselPosition(0);
-      }, 10);
-    } else {
-      setTimeout(() => {
-        setCarouselPosition(carouselPosition + 5);
-      }, 10);
-    }
+  const requestRef = useRef();
+  const previousTimeRef = useRef();
+
+  const loopCarousel = time => {
+    const deltaTime = time - previousTimeRef.current || 1;
+
+    setCarouselPosition(prevCount => {
+      return Math.round((prevCount + (deltaTime * 0.1) + 2) % endCarousel);
+    });
+    previousTimeRef.current = time;
+    requestRef.current = requestAnimationFrame(loopCarousel);
   }
 
-  useEffect(()=> {
-    handleCarouselLoop();
-  }, [carouselPosition, endCarousel]);
+  useEffect(() => {
+    requestRef.current = requestAnimationFrame(loopCarousel);
+    return () => cancelAnimationFrame(requestRef.current);
+  }, []);
 
   return (
     <section className="skill" id="skills">
@@ -82,11 +75,11 @@ export const Skills = () => {
                 Here are some of the technologies I used for building websites.{" "}
                 <br /> ¡Cilck them to know more!
               </p>
-              <section 
-              className="carousel-container"
-              style={{
-                transform: `translateX(-${carouselPosition}px)`
-              }}
+              <section
+                className="carousel-container"
+                style={{
+                  transform: `translateX(-${carouselPosition}px)`
+                }}
               >
                 {skills.concat(skills).map(({ Icon, text }, index) => {
                   return (
