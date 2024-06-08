@@ -715,6 +715,7 @@ nav.navbar .navbar-toggler-icon:before {
 }
 
 .header-card h2 {
+  color: #fff;
   position: absolute;
   top: 28px;
   left: 20px;
