@@ -5,6 +5,9 @@ import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 // import images projects
+import playlistRetriever from '../assets/img/spotify-playlist-retriver.jpg'
+import bankDashboard from '../assets/img/bank-dashboard.jpg';
+import budgetSystem from '../assets/img/budgetSystem.jpg';
 import postresLecker from "../assets/img/postres-lecker-img.jpg";
 import supermercado from "../assets/img/supermercado-base-datos.jpg";
 import saturday from "../assets/img/saturday-com.jpg";
@@ -31,54 +34,88 @@ export const Projects = () => {
       title: "Jamming",
       description: "Create custome playlist for your Spotify",
       imgUrl: Jammign,
+      techStack: ['Next.js', 'NextAuth', 'Node.js', 'Spotify API', 'React Context API'],
       URL: "https://jamming-sooty.vercel.app/",
-    },
-    {
+    }, {
       title: "Twitter Clone",
       description: "A clone of the Twitter social media app",
       imgUrl: Twitter,
+      techStack: ['Next.js', 'NextAuth', 'TypeScript', 'Tailwind CSS', 'Redux', 'MongoDB', 'Edge Store', 'Vercel'],
       URL: "https://twitter-clone-matdweb.vercel.app/",
-    },
-    {
+    }, {
+      title: "Bank Dashboard",
+      description: "A Banking dashboard template",
+      imgUrl: bankDashboard,
+      techStack: ['React', 'Vite.js', 'Recharts', 'React Context API', 'React router', 'Chakra UI', 'Material UI'],
+      URL: "https://bank-dashboard-react.netlify.app/Home",
+    }, {
       title: "Postres Lecker",
       description: "Baking Entrepreneurship",
       imgUrl: postresLecker,
+      techStack: ['HMTL', 'CSS', 'JavaScript', 'Git', 'Github'],
       URL: "https://postres-lecker.netlify.app",
     }, {
       title: "Supermarket",
       description: "Database administrator",
       imgUrl: supermercado,
+      techStack: ['HTML', 'CSS', 'JavaScript', 'OOP'],
       URL: "https://base-datos-manager-supermercado.netlify.app/",
     }, {
       title: "Saturday.com",
       description: "Tasks manager",
       imgUrl: saturday,
+      techStack: ['HTML', 'CSS', 'JavaScript', 'OOP'],
       URL: "https://saturday-com.netlify.app",
+    }, {
+      title: "Budget System",
+      description: "Budget Administrator for tour guides",
+      imgUrl: budgetSystem,
+      techStack: ['Next.js', 'TypeScript', 'Redux', 'MongoDB', 'Chakra UI'],
+      URL: "https://github.com/Matdweb/budget_system",
+    },
+    {
+      title: "Album Searcher",
+      description: "React app that searches for albums in Spotify",
+      imgUrl: OptionsMenu,
+      techStack: ['React', 'Vite.js', 'Spotify API'],
+      URL: "https://album-searcher-experimental.vercel.app/",
+    },
+    {
+      title: "Spotify Playlist Retriever",
+      description: "React app that retrieves and creates playlists in Spotify",
+      imgUrl: playlistRetriever,
+      techStack: ['Next.js', 'NextAuth', 'React Context API', 'Spotify API'],
+      URL: "https://spotiy-playlist-retriever-experimental.vercel.app/",
     }, {
       title: "Exercise Routine App",
       description: "Administrates your exercise routine",
       imgUrl: AppRutina,
+      techStack: ['HTML', 'CSS', 'JavaScript'],
       URL: "https://app-rutina-ejercicios.netlify.app",
     },
     {
       title: "Options Menu",
       description: "React options menu banner minimalistic",
       imgUrl: OptionsMenu,
+      techStack: ['React', 'Vite.js', 'GitHub'],
       URL: "https://options-banner-minimalistic-react.netlify.app/",
     }, {
       title: "Bitcoin Cards",
       description: "Bitcoin React cards template",
       imgUrl: BitcoinCards,
+      techStack: ['React', 'Vite.js', 'GitHub'],
       URL: "https://bitcoin-cards-react.netlify.app/",
     }, {
       title: "Video games landing page",
       description: "React landing page template",
       imgUrl: VGPage,
+      techStack: ['React', 'Vite.js', 'GitHub'],
       URL: "https://video-games-landing-page-react.netlify.app/",
     }, {
       title: "Credit-Card-Component",
       description: "React Credit Card Component",
       imgUrl: CreditCard,
+      techStack: ['React', 'Vite.js', 'GitHub'],
       URL: "https://credit-card-react-component.netlify.app",
     },
   ];
