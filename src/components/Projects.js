@@ -5,6 +5,7 @@ import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 // import images projects
+import albumSearcher from '../assets/img/AlbumSearcher.jpg';
 import playlistRetriever from '../assets/img/spotify-playlist-retriver.jpg'
 import bankDashboard from '../assets/img/bank-dashboard.jpg';
 import budgetSystem from '../assets/img/budgetSystem.jpg';
@@ -40,7 +41,7 @@ export const Projects = () => {
       title: "Twitter Clone",
       description: "A clone of the Twitter social media app",
       imgUrl: Twitter,
-      techStack: ['Next.js', 'NextAuth', 'TypeScript', 'Tailwind CSS', 'Redux', 'MongoDB', 'Edge Store', 'Vercel'],
+      techStack: ['Next.js', 'NextAuth', 'TypeScript', 'Tailwind CSS', 'Redux', 'Node.js', 'MongoDB', 'Edge Store', 'Vercel'],
       URL: "https://twitter-clone-matdweb.vercel.app/",
     }, {
       title: "Bank Dashboard",
@@ -76,7 +77,7 @@ export const Projects = () => {
     {
       title: "Album Searcher",
       description: "React app that searches for albums in Spotify",
-      imgUrl: OptionsMenu,
+      imgUrl: albumSearcher,
       techStack: ['React', 'Vite.js', 'Spotify API'],
       URL: "https://album-searcher-experimental.vercel.app/",
     },
