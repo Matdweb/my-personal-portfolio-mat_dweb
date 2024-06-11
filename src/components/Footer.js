@@ -20,7 +20,7 @@ export const Footer = () => {
               <a href="https://twitter.com/MatDweb"><FaTwitter style={{color: "#fff", textDecoration: "none"}}/></a>
               <a href="https://github.com/Matdweb"><FaGithub style={{color: "#fff", textDecoration: "none"}}/></a>
             </div>
-            <p>©2022 MAT_DWEB - All Rights Reserved</p>
+            <p>©2024 Mat_dweb - All rigths reserved</p>
           </Col>
         </Row>
       </Container>
