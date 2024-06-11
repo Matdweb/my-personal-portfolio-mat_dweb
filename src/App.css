@@ -17,6 +17,13 @@
   font-weight: 400;
 }
 
+.source-code-pro {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
 /************ Default Css ************/
 * {
   margin: 0;
@@ -566,9 +573,9 @@ nav.navbar .navbar-toggler-icon:before {
 
 .proj-txtx {
   position: absolute;
-  text-align: center;
+  text-align: start;
   top: 65%;
-  left: 50%;
+  left: 58%;
   transform: translate(-50%, -50%);
   transition: 0.5s ease-in-out;
   opacity: 0;
@@ -576,8 +583,41 @@ nav.navbar .navbar-toggler-icon:before {
 }
 
 .proj-imgbx:hover .proj-txtx {
-  top: 50%;
+  top: 40%;
   opacity: 1;
+}
+
+.proj-txtx h4 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1.1em;
+}
+
+.proj-txtx .proj-tech-stack {
+  width: 100%;
+  max-width: 310px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 5px 0;
+}
+
+.proj-txtx .proj-tech-stack span.proj-tech {
+  min-width: 40px;
+  padding: 3px 8px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #d9d9d988;
+  outline: 2px solid #fff;
+  border-radius: 30px;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .proj-txtx h4 {
